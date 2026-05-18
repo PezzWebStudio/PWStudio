@@ -1,0 +1,206 @@
+/* styles.css */
+:root {
+    --forest: #2C4A38;
+    --terracotta: #D9705A;
+    --sage: #8FAF8A;
+    --moss: #1F8C3B;
+    --cream: #F5F0E8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Mono', monospace;
+    background-color: var(--cream);
+    color: var(--forest);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+}
+
+/* Nav */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(245, 240, 232, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: var(--forest);
+    font-weight: 500;
+}
+
+.status-badge {
+    background: var(--moss);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--forest);
+    color: white;
+}
+
+.topo-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(rgba(44,74,56,0.7), rgba(44,74,56,0.7)),
+        url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 800 600%27%3E%3Cpath d=%27M0 300 Q200 100 400 300 Q600 500 800 300%27 fill=%27none%27 stroke=%27%238FAF8A%27 stroke-width=%272%27 opacity=%270.3%27/%3E%3C/svg%27') repeat;
+    background-size: cover;
+    animation: topo-move 40s linear infinite;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    padding: 0 2rem;
+}
+
+.headline {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.accent {
+    color: var(--terracotta);
+}
+
+.subheadline {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: var(--terracotta);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 0.75rem;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(217,112,90,0.3);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.marquee {
+    margin-top: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+/* Section Styles */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--forest);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.8rem;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes topo-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 100px; }
+}
