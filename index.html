@@ -5,38 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pezz Web Studios | Trail-Tested Web Design</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@400;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.jpg" type="image/jpg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@300;400;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-< img src="logo.jpg" alt="Pezz Web Studios logo" >
-            <div class="nav-links">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Pezz Web Studios" width="140" height="70">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop">
                 <a href="#home" onclick="navigateTo('home')">Home</a>
                 <a href="#work" onclick="navigateTo('work')">Work</a>
                 <a href="#about" onclick="navigateTo('about')">About</a>
                 <a href="#contact" onclick="navigateTo('contact')">Contact</a>
             </div>
-            <div class="status-badge">
+
+            <div class="status-badge desktop">
                 <span class="live-dot"></span>
                 Accepting work
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="#home" onclick="closeMobileMenu()">Home</a>
+                <a href="#work" onclick="closeMobileMenu()">Work</a>
+                <a href="#about" onclick="closeMobileMenu()">About</a>
+                <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+                
+                <div class="mobile-status">
+                    <span class="live-dot"></span>
+                    Currently accepting new projects
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero / Home -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="topo-bg"></div>
         <div class="hero-content">
-            <div class="brand-mark">
-                <div class="three-dots">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-            <h1 class="headline">Built from the <span class="accent">forest floor</span> to the trail ahead.</h1>
+            <h1 class="headline">Built from the <span class="accent">forest floor</span><br>to the trail ahead.</h1>
             <p class="subheadline">A freelance web design studio built for adventurers.<br>Design-first. Dev-supported. Rooted in the wild.</p>
             
             <div class="cta-group">
@@ -46,7 +67,7 @@
             
             <div class="marquee">
                 <div class="marquee-content">
-                    • Discovery • Design • Deploy &amp; Support • Branding • E-commerce • Custom Dev • 
+                    Discovery • Design • Deploy &amp; Support • Branding • E-commerce • Custom Development • 
                 </div>
             </div>
         </div>
@@ -64,39 +85,62 @@
             <div class="card">
                 <div class="step">02</div>
                 <h3>Design</h3>
-                <p>Trail-tested interfaces that feel handcrafted.</p>
+                <p>Trail-tested interfaces that feel handcrafted and purposeful.</p>
             </div>
             <div class="card">
                 <div class="step">03</div>
                 <h3>Deploy &amp; Support</h3>
-                <p>Clean code. Honest timelines. Ongoing trail crew support.</p>
+                <p>Clean code. Honest timelines. Ongoing Trail Crew support.</p>
             </div>
         </div>
     </section>
 
-    <!-- Featured Work Teaser -->
+    <!-- Trail Log -->
     <section id="work" class="section work-section">
         <h2 class="section-title">The Trail Log</h2>
+        <p class="section-subtitle">Recent expeditions — each project is a journey completed with care.</p>
+        
         <div class="projects-grid">
-            <!-- Placeholder projects - replace with real ones -->
-            <div class="project-card">
-                <div class="project-image">🌲</div>
-                <div class="project-info">
-                    <h3>Client Project 1</h3>
-                    <p>Branding + Custom Site</p>
-                    <span class="tag">Rocky Trail</span>
+            <a href="https://brassguy.github.io/TravelWeb/" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="https://picsum.photos/id/1015/600/400" alt="TravelWeb">
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🏔️</div>
                 <div class="project-info">
-                    <h3>Client Project 2</h3>
-                    <p>E-commerce Build</p>
-                    <span class="tag">Summit Route</span>
+                    <h3>TravelWeb</h3>
+                    <p>Luxury travel experience website with immersive video hero and destination showcases.</p>
+                    <span class="tag">Branding • Design • Development</span>
+                    <span class="terrain">Multi-Day Expedition</span>
                 </div>
-            </div>
+            </a>
+
+            <a href="https://brassguy.github.io/sleats/" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="https://picsum.photos/id/106/600/400" alt="Salt Lake Eats">
+                </div>
+                <div class="project-info">
+                    <h3>Salt Lake Eats</h3>
+                    <p>Local food &amp; drink guide for the Salt Lake Valley — seasonal and vibrant.</p>
+                    <span class="tag">Content • UI/UX • Development</span>
+                    <span class="terrain">Day Hike</span>
+                </div>
+            </a>
+
+            <a href="https://brassguy.github.io/OutdoorExchange/" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="https://picsum.photos/id/1018/600/400" alt="Outdoor Exchange">
+                </div>
+                <div class="project-info">
+                    <h3>Outdoor Exchange</h3>
+                    <p>Premium outdoor apparel e-commerce concept with strong brand storytelling.</p>
+                    <span class="tag">E-commerce • Branding • Development</span>
+                    <span class="terrain">Summit Route</span>
+                </div>
+            </a>
         </div>
-        <a href="#" class="btn-secondary center">View Full Portfolio</a>
+
+        <div class="text-center">
+            <a href="#" class="btn-secondary">View All Expeditions →</a>
+        </div>
     </section>
 
     <!-- About -->
@@ -105,18 +149,18 @@
             <div class="about-text">
                 <h2>The Guide</h2>
                 <p>Hi, I'm Pezz. I build websites that feel like stepping onto a sunlit trail — purposeful, beautiful, and built to last.</p>
-                <p>With a background in [your background], I combine thoughtful design with solid development to help bold brands tell their stories online.</p>
+                <p>With experience in design and development, I help bold brands tell their stories online with clarity and character.</p>
                 
                 <div class="skills">
                     <span class="tag">Webflow</span>
                     <span class="tag">React</span>
                     <span class="tag">Tailwind</span>
                     <span class="tag">Framer Motion</span>
+                    <span class="tag">WordPress</span>
                 </div>
             </div>
             <div class="portrait-placeholder">
-                <!-- Add your portrait here -->
-                <div style="background:#2C4A38; color:white; height:320px; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:4rem;">📸</div>
+                <div style="background:#2C4A38; color:white; height:340px; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:5rem;">📸</div>
             </div>
         </div>
     </section>
@@ -130,13 +174,13 @@
             <form id="contact-form" class="contact-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Email Address" required>
-                <select>
+                <select required>
                     <option value="">Project Type</option>
                     <option>Day Hike — Small Refresh</option>
                     <option>Multi-Day — Full Redesign</option>
                     <option>Expedition — Custom Build</option>
                 </select>
-                <textarea placeholder="Tell me about your project..." rows="5"></textarea>
+                <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
             
@@ -151,12 +195,10 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2026 Pezz Web Studios. Built with intention in the mountains.</p>
-            <div class="social-links">
-                <!-- Add social icons -->
-            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
