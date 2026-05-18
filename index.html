@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pezz Web Studios | Trail-Tested Web Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@400;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="120" height="60" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simplified logo: P with dots -->
+                    <text x="10" y="75" font-family="sans-serif" font-size="90" font-weight="900" fill="#2C4A38">P</text>
+                    <circle cx="105" cy="75" r="8" fill="#D9705A"/>
+                    <circle cx="130" cy="75" r="8" fill="#8FAF8A"/>
+                    <circle cx="155" cy="75" r="8" fill="#1F8C3B"/>
+                </svg>
+            </a>
+            <div class="nav-links">
+                <a href="#home" onclick="navigateTo('home')">Home</a>
+                <a href="#work" onclick="navigateTo('work')">Work</a>
+                <a href="#about" onclick="navigateTo('about')">About</a>
+                <a href="#contact" onclick="navigateTo('contact')">Contact</a>
+            </div>
+            <div class="status-badge">
+                <span class="live-dot"></span>
+                Accepting work
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Home -->
+    <section id="home" class="hero">
+        <div class="topo-bg"></div>
+        <div class="hero-content">
+            <div class="brand-mark">
+                <div class="three-dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <h1 class="headline">Built from the <span class="accent">forest floor</span> to the trail ahead.</h1>
+            <p class="subheadline">A freelance web design studio built for adventurers.<br>Design-first. Dev-supported. Rooted in the wild.</p>
+            
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Start an Expedition</a>
+                <a href="#work" class="btn-secondary">See the Trail Log</a>
+            </div>
+            
+            <div class="marquee">
+                <div class="marquee-content">
+                    • Discovery • Design • Deploy &amp; Support • Branding • E-commerce • Custom Dev • 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="section how-it-works">
+        <h2 class="section-title">How We Navigate</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="step">01</div>
+                <h3>Discovery</h3>
+                <p>Listening. We map your goals, audience, and terrain.</p>
+            </div>
+            <div class="card">
+                <div class="step">02</div>
+                <h3>Design</h3>
+                <p>Trail-tested interfaces that feel handcrafted.</p>
+            </div>
+            <div class="card">
+                <div class="step">03</div>
+                <h3>Deploy &amp; Support</h3>
+                <p>Clean code. Honest timelines. Ongoing trail crew support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Teaser -->
+    <section id="work" class="section work-section">
+        <h2 class="section-title">The Trail Log</h2>
+        <div class="projects-grid">
+            <!-- Placeholder projects - replace with real ones -->
+            <div class="project-card">
+                <div class="project-image">🌲</div>
+                <div class="project-info">
+                    <h3>Client Project 1</h3>
+                    <p>Branding + Custom Site</p>
+                    <span class="tag">Rocky Trail</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🏔️</div>
+                <div class="project-info">
+                    <h3>Client Project 2</h3>
+                    <p>E-commerce Build</p>
+                    <span class="tag">Summit Route</span>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn-secondary center">View Full Portfolio</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about-section">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>The Guide</h2>
+                <p>Hi, I'm Pezz. I build websites that feel like stepping onto a sunlit trail — purposeful, beautiful, and built to last.</p>
+                <p>With a background in [your background], I combine thoughtful design with solid development to help bold brands tell their stories online.</p>
+                
+                <div class="skills">
+                    <span class="tag">Webflow</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Tailwind</span>
+                    <span class="tag">Framer Motion</span>
+                </div>
+            </div>
+            <div class="portrait-placeholder">
+                <!-- Add your portrait here -->
+                <div style="background:#2C4A38; color:white; height:320px; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:4rem;">📸</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+        <div class="contact-container">
+            <h2>Base Camp</h2>
+            <p class="contact-intro">Ready to chart a new route? Let's talk by the fire.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <select>
+                    <option value="">Project Type</option>
+                    <option>Day Hike — Small Refresh</option>
+                    <option>Multi-Day — Full Redesign</option>
+                    <option>Expedition — Custom Build</option>
+                </select>
+                <textarea placeholder="Tell me about your project..." rows="5"></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            
+            <div class="contact-meta">
+                <p>Usually back within 24 hours — except when off-grid.</p>
+                <a href="mailto:project-inquiry@pezz.studio">project-inquiry@pezz.studio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Pezz Web Studios. Built with intention in the mountains.</p>
+            <div class="social-links">
+                <!-- Add social icons -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
