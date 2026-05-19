@@ -403,13 +403,52 @@ font-family: inherit;
 font-size: 1rem;
 }
 
-/* Footer */
 footer {
-background: var(--forest);
-color: #ddd;
-text-align: center;
-padding: 3.5rem 2rem;
-font-size: 0.95rem;
+    background: var(--forest);
+    color: #ddd;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.footer-logo img {
+    opacity: 0.85;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s;
+}
+
+.footer-logo:hover img {
+    opacity: 1;
+}
+
+.footer-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+}
+
+.footer-email {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+.footer-email:hover {
+    opacity: 0.75;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.5rem;
 }
 
 /* Animations */
