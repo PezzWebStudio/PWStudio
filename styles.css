@@ -355,6 +355,13 @@ gap: 5rem;
 align-items: center;
 }
 
+.about-cta {
+    display: inline-block;
+    margin-top: 1.8rem;
+    background: var(--terracotta);
+    color: white;
+}
+
 .portrait-frame {
 width: 100%;
 max-width: 340px;
