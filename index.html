@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pezz Web Studios - Freelance web design for adventurers. Thoughtful design, solid development, rooted in the wild.">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="theme-color" content="#2C4A38">
     
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="Pezz Web Studios | Trail-Tested Web Design">
     <meta property="og:description" content="Freelance web design studio for adventurers. Thoughtful design. Solid development. Rooted in the wild.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pezzwebstudios.com">
-    <meta property="og:image" content="https://pezzwebstudios.com/og-image.png">
+    <meta property="og:image" content="https://pezzwebstudios.com/logo.png">
     
     <title>Pezz Web Studios | Trail-Tested Web Design</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@300;400;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="nav">
         <div class="nav-container">
             <a href="index.html" class="logo" aria-label="Pezz Web Studios Home">
-                <img src="logo.svg" alt="Pezz Web Studios Logo" width="160" height="85">
+                <img src="logo.png" alt="Pezz Web Studios Logo" width="160" height="85">
             </a>
 
             <nav class="nav-links desktop" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#about">About</a></li>
@@ -52,11 +52,11 @@
         <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
             <div class="mobile-menu-content">
                 <ul>
-                    <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
-                    <li><a href="#work" onclick="closeMobileMenu()">Work</a></li>
-                    <li><a href="#pricing" onclick="closeMobileMenu()">Pricing</a></li>
-                    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-                    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                    <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#work" class="mobile-nav-link">Work</a></li>
+                    <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+                    <li><a href="#about" class="mobile-nav-link">About</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -70,8 +70,8 @@
             <p class="subheadline">Freelance web design studio for adventurers.<br>Thoughtful design. Solid development. Rooted in the wild.</p>
             
             <div class="cta-group">
-                <a href="#contact" class="btn-primary">Start Your Expedition</a>
-                <a href="#pricing" class="btn-secondary">See Trail Packages</a>
+                <a href="#contact" class="btn btn-primary">Start Your Expedition</a>
+                <a href="#pricing" class="btn btn-secondary">See Trail Packages</a>
             </div>
         </div>
     </section>
@@ -105,11 +105,11 @@
             <article class="project-card">
                 <a href="https://brassguy.github.io/TravelWeb/" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
-                        <img src="https://picsum.photos/id/1015/600/400" alt="TravelWeb - Luxury travel experience site" loading="lazy" width="600" height="400">
+                        <img src="https://picsum.photos/id/1015/600/400" alt="TravelWeb - Luxury travel experience and booking platform" loading="lazy" width="600" height="400">
                     </div>
                     <div class="project-info">
                         <h3>TravelWeb</h3>
-                        <p>Luxury travel experience site.</p>
+                        <p>A luxury travel platform connecting adventurers with curated experiences worldwide.</p>
                         <span class="tag">Branding • Design</span>
                         <span class="terrain">Multi-Day Expedition</span>
                     </div>
@@ -119,11 +119,11 @@
             <article class="project-card">
                 <a href="#" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
-                        <img src="https://picsum.photos/id/1018/600/400" alt="Project 2 - Your project description" loading="lazy" width="600" height="400">
+                        <img src="https://picsum.photos/id/1018/600/400" alt="EcoVentures - Sustainable outdoor gear marketplace" loading="lazy" width="600" height="400">
                     </div>
                     <div class="project-info">
-                        <h3>Project 2</h3>
-                        <p>Your project description here.</p>
+                        <h3>EcoVentures</h3>
+                        <p>E-commerce platform for sustainable outdoor gear and eco-friendly adventure supplies.</p>
                         <span class="tag">Design • Development</span>
                         <span class="terrain">Day Hike</span>
                     </div>
@@ -133,11 +133,11 @@
             <article class="project-card">
                 <a href="#" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
-                        <img src="https://picsum.photos/id/1019/600/400" alt="Project 3 - Your project description" loading="lazy" width="600" height="400">
+                        <img src="https://picsum.photos/id/1019/600/400" alt="TrailMate - Community hiking platform for finding adventure partners" loading="lazy" width="600" height="400">
                     </div>
                     <div class="project-info">
-                        <h3>Project 3</h3>
-                        <p>Your project description here.</p>
+                        <h3>TrailMate</h3>
+                        <p>Community platform connecting hikers and outdoor enthusiasts for group adventures.</p>
                         <span class="tag">Branding • Strategy</span>
                         <span class="terrain">Full Expedition</span>
                     </div>
@@ -163,7 +163,7 @@
                     <li>Basic SEO Setup</li>
                     <li>1 Round of Revisions</li>
                 </ul>
-                <a href="#contact" class="btn-secondary">Choose Day Hike</a>
+                <a href="#contact" class="btn btn-secondary">Choose Day Hike</a>
             </article>
 
             <!-- Multi-Day Trek -->
@@ -179,7 +179,7 @@
                     <li>Launch Support + Training</li>
                     <li>3 Rounds of Revisions</li>
                 </ul>
-                <a href="#contact" class="btn-primary">Start Multi-Day Trek</a>
+                <a href="#contact" class="btn btn-primary">Start Multi-Day Trek</a>
             </article>
 
             <!-- Full Expedition -->
@@ -193,7 +193,7 @@
                     <li>Ongoing Trail Crew Support</li>
                     <li>Priority Revisions</li>
                 </ul>
-                <a href="#contact" class="btn-secondary">Plan Expedition</a>
+                <a href="#contact" class="btn btn-secondary">Plan Expedition</a>
             </article>
         </div>
     </section>
@@ -202,8 +202,8 @@
     <section id="about" class="section about-section" aria-labelledby="about-title">
         <h2 id="about-title" class="section-title">About Us</h2>
         <div class="about-content">
-            <p>Pezz Web Studios was born from a love of the outdoors and a passion for thoughtful design. We believe that great websites, like great trails, should be intuitive, beautiful, and built to last. Every project we take on is an expedition—we're committed to understanding your vision and delivering solutions that exceed expectations.</p>
-            <p>Our team combines strategic thinking, creative design, and solid development practices to craft websites that tell your story and connect with your audience.</p>
+            <p>Pezz Web Studios was born from a love of the outdoors and a passion for thoughtful design. We believe that great websites, like great trails, should be intuitive, beautiful, and built to last. Whether you're building a startup, refreshing an existing site, or launching a digital venture, we bring the same attention to detail and care to your project as we do to selecting the perfect trail.</p>
+            <p>Our team combines strategic thinking, creative design, and solid development practices to craft websites that tell your story and connect with your audience. We're not just building websites—we're building digital basecamp for your brand.</p>
         </div>
     </section>
 
@@ -212,7 +212,7 @@
         <h2 id="contact-title" class="section-title">Start Your Expedition</h2>
         <p class="section-subtitle">Ready to take the next step? Let's talk about your project.</p>
         
-        <form class="contact-form" method="POST" action="#" aria-label="Contact Form">
+        <form class="contact-form" id="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" aria-label="Contact Form">
             <div class="form-group">
                 <label for="name">Your Name *</label>
                 <input type="text" id="name" name="name" required aria-required="true">
@@ -243,7 +243,8 @@
                 <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
             </div>
 
-            <button type="submit" class="btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div id="form-status" class="form-status"></div>
         </form>
 
         <div class="contact-info">
