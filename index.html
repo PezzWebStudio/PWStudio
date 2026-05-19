@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pezz Web Studios - Freelance web design for adventurers. Thoughtful design, solid development, rooted in the wild.">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Pezz Web Studios | Trail-Tested Web Design">
+    <meta property="og:description" content="Freelance web design studio for adventurers. Thoughtful design. Solid development. Rooted in the wild.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pezzwebstudios.com">
+    <meta property="og:image" content="https://pezzwebstudios.com/og-image.png">
+    
     <title>Pezz Web Studios | Trail-Tested Web Design</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@300;400;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.png" type="image/svg+xml">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
+    <!-- Navigation Header -->
+    <header class="nav">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.svg" alt="Pezz Web Studios" width="160" height="85">
+            <a href="index.html" class="logo" aria-label="Pezz Web Studios Home">
+                <img src="logo.svg" alt="Pezz Web Studios Logo" width="160" height="85">
             </a>
 
-            <div class="nav-links desktop">
-                <a href="#home">Home</a>
-                <a href="#work">Work</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <nav class="nav-links desktop" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
 
             <div class="status-badge desktop">
                 <span class="live-dot"></span>
                 Accepting work
             </div>
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -37,22 +49,24 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
             <div class="mobile-menu-content">
-                <a href="#home" onclick="closeMobileMenu()">Home</a>
-                <a href="#work" onclick="closeMobileMenu()">Work</a>
-                <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
-                <a href="#about" onclick="closeMobileMenu()">About</a>
-                <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+                <ul>
+                    <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="#work" onclick="closeMobileMenu()">Work</a></li>
+                    <li><a href="#pricing" onclick="closeMobileMenu()">Pricing</a></li>
+                    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
         <div class="topo-bg"></div>
         <div class="hero-content">
-            <h1 class="headline">Built from the <span class="accent">forest floor</span><br>to the trail ahead.</h1>
+            <h1 id="hero-title" class="headline">Built from the <span class="accent">forest floor</span><br>to the trail ahead.</h1>
             <p class="subheadline">Freelance web design studio for adventurers.<br>Thoughtful design. Solid development. Rooted in the wild.</p>
             
             <div class="cta-group">
@@ -62,53 +76,84 @@
         </div>
     </section>
 
-    <!-- How it Works -->
-    <section class="section">
-        <h2 class="section-title">How We Navigate</h2>
+    <!-- How it Works Section -->
+    <section class="section" aria-labelledby="how-we-navigate">
+        <h2 id="how-we-navigate" class="section-title">How We Navigate</h2>
         <div class="grid-3">
-            <div class="card">
-                <div class="step">01</div>
+            <article class="card">
+                <div class="step" aria-label="Step 1">01</div>
                 <h3>Discovery</h3>
                 <p>We listen and map your goals, audience, and terrain.</p>
-            </div>
-            <div class="card">
-                <div class="step">02</div>
+            </article>
+            <article class="card">
+                <div class="step" aria-label="Step 2">02</div>
                 <h3>Design</h3>
                 <p>Handcrafted, responsive experiences that feel alive.</p>
-            </div>
-            <div class="card">
-                <div class="step">03</div>
+            </article>
+            <article class="card">
+                <div class="step" aria-label="Step 3">03</div>
                 <h3>Deploy &amp; Support</h3>
                 <p>Clean code, honest timelines, and ongoing trail crew care.</p>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- Trail Log -->
-    <section id="work" class="section work-section">
-        <h2 class="section-title">The Trail Log</h2>
+    <!-- Trail Log / Work Section -->
+    <section id="work" class="section work-section" aria-labelledby="trail-log-title">
+        <h2 id="trail-log-title" class="section-title">The Trail Log</h2>
         <div class="projects-grid">
-            <a href="https://brassguy.github.io/TravelWeb/" target="_blank" class="project-card">
-                <div class="project-image"><img src="https://picsum.photos/id/1015/600/400" alt="TravelWeb"></div>
-                <div class="project-info">
-                    <h3>TravelWeb</h3>
-                    <p>Luxury travel experience site.</p>
-                    <span class="tag">Branding • Design</span>
-                    <span class="terrain">Multi-Day Expedition</span>
-                </div>
-            </a>
-            <!-- Repeat for other two projects... (same as before) -->
+            <article class="project-card">
+                <a href="https://brassguy.github.io/TravelWeb/" target="_blank" rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/id/1015/600/400" alt="TravelWeb - Luxury travel experience site" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="project-info">
+                        <h3>TravelWeb</h3>
+                        <p>Luxury travel experience site.</p>
+                        <span class="tag">Branding • Design</span>
+                        <span class="terrain">Multi-Day Expedition</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/id/1018/600/400" alt="Project 2 - Your project description" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>Your project description here.</p>
+                        <span class="tag">Design • Development</span>
+                        <span class="terrain">Day Hike</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project-card">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/id/1019/600/400" alt="Project 3 - Your project description" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 3</h3>
+                        <p>Your project description here.</p>
+                        <span class="tag">Branding • Strategy</span>
+                        <span class="terrain">Full Expedition</span>
+                    </div>
+                </a>
+            </article>
         </div>
     </section>
 
-    <!-- New Pricing Section -->
-    <section id="pricing" class="section pricing-section">
-        <h2 class="section-title">Trail Packages</h2>
+    <!-- Pricing Section -->
+    <section id="pricing" class="section pricing-section" aria-labelledby="pricing-title">
+        <h2 id="pricing-title" class="section-title">Trail Packages</h2>
         <p class="section-subtitle">Choose the journey that fits your needs.</p>
 
         <div class="pricing-grid">
             <!-- Day Hike -->
-            <div class="pricing-card">
+            <article class="pricing-card">
                 <h3>Day Hike</h3>
                 <div class="price">$1,800</div>
                 <ul>
@@ -119,11 +164,11 @@
                     <li>1 Round of Revisions</li>
                 </ul>
                 <a href="#contact" class="btn-secondary">Choose Day Hike</a>
-            </div>
+            </article>
 
-            <!-- Multi-Day -->
-            <div class="pricing-card featured">
-                <div class="popular">Most Popular</div>
+            <!-- Multi-Day Trek -->
+            <article class="pricing-card featured">
+                <div class="popular" aria-label="Most Popular Package">Most Popular</div>
                 <h3>Multi-Day Trek</h3>
                 <div class="price">$3,800</div>
                 <ul>
@@ -135,10 +180,10 @@
                     <li>3 Rounds of Revisions</li>
                 </ul>
                 <a href="#contact" class="btn-primary">Start Multi-Day Trek</a>
-            </div>
+            </article>
 
-            <!-- Expedition -->
-            <div class="pricing-card">
+            <!-- Full Expedition -->
+            <article class="pricing-card">
                 <h3>Full Expedition</h3>
                 <div class="price">$6,500+</div>
                 <ul>
@@ -149,12 +194,80 @@
                     <li>Priority Revisions</li>
                 </ul>
                 <a href="#contact" class="btn-secondary">Plan Expedition</a>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- About & Contact sections remain similar but improved for mobile -->
+    <!-- About Section -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>Pezz Web Studios was born from a love of the outdoors and a passion for thoughtful design. We believe that great websites, like great trails, should be intuitive, beautiful, and built to last. Every project we take on is an expedition—we're committed to understanding your vision and delivering solutions that exceed expectations.</p>
+            <p>Our team combines strategic thinking, creative design, and solid development practices to craft websites that tell your story and connect with your audience.</p>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Start Your Expedition</h2>
+        <p class="section-subtitle">Ready to take the next step? Let's talk about your project.</p>
+        
+        <form class="contact-form" method="POST" action="#" aria-label="Contact Form">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company / Organization</label>
+                <input type="text" id="company" name="company">
+            </div>
+
+            <div class="form-group">
+                <label for="project-type">Project Type *</label>
+                <select id="project-type" name="project-type" required aria-required="true">
+                    <option value="">Select a package</option>
+                    <option value="day-hike">Day Hike ($1,800)</option>
+                    <option value="multi-day">Multi-Day Trek ($3,800)</option>
+                    <option value="expedition">Full Expedition ($6,500+)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Tell Us About Your Project *</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <p>Or reach out directly:</p>
+            <p><a href="mailto:hello@pezzwebstudios.com">hello@pezzwebstudios.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Pezz Web Studios. All rights reserved.</p>
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
