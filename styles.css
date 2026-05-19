@@ -368,3 +368,90 @@ h1, h2, h3 {
         max-width: 280px;
     }
 }
+
+/* Pricing Section */
+.pricing-section {
+    background: #f8f5f0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.pricing-card.featured {
+    transform: scale(1.08);
+    box-shadow: 0 15px 40px rgba(31,140,59,0.2);
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--forest);
+    margin: 1rem 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.pricing-card li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--moss);
+    color: white;
+    padding: 4px 20px;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+}
+
+/* Mobile Improvements */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    
+    .nav-container {
+        padding: 1rem 1.25rem;
+    }
+    
+    .projects-grid, .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
