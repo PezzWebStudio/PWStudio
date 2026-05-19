@@ -435,7 +435,7 @@ footer {
 }
 
 .footer-email {
-    color: var(--terracotta);
+    color: #F5F0E8;
     text-decoration: none;
     font-size: 0.95rem;
     transition: opacity 0.3s;
