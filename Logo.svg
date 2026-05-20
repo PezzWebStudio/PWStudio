@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="none"/>
+
+  <!-- Main P shape -->
+  <path d="
+    M 180 160
+    L 180 810
+    L 345 810
+    L 345 610
+    L 470 610
+    C 650 610, 735 520, 735 365
+    C 735 220, 650 160, 470 160
+    Z
+
+    M 345 280
+    L 430 280
+    C 520 280, 555 320, 555 380
+    C 555 440, 520 480, 430 480
+    L 345 480
+    Z
+  " fill="#294B3A"/>
+
+  <!-- Dots -->
+  <circle cx="450" cy="760" r="62" fill="#DC735D"/>
+  <circle cx="585" cy="760" r="62" fill="#9CAD85"/>
+  <circle cx="720" cy="760" r="62" fill="#04933A"/>
+</svg>
