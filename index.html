@@ -189,6 +189,66 @@
     </div>
 </section>
 
+<section id="contact" class="section contact-section">
+    <h2 class="section-title">Start Your Journey</h2>
+    <p class="section-subtitle">Fill out the form below and I'll get back to you within 24 hours.</p>
+
+    <div class="contact-wrapper">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="business">Business / Project Name</label>
+                <input type="text" id="business" placeholder="What are we building for?">
+            </div>
+
+            <div class="form-group">
+                <label>Select a Plan</label>
+                <div class="plan-selector">
+                    <label class="plan-option">
+                        <input type="radio" name="plan" value="Individual" required>
+                        <span class="plan-box">
+                            <span class="plan-name">Individual</span>
+                            <span class="plan-price">$1,800</span>
+                        </span>
+                    </label>
+                    <label class="plan-option">
+                        <input type="radio" name="plan" value="Small Business" required>
+                        <span class="plan-box popular-plan">
+                            <span class="plan-badge">Most Popular</span>
+                            <span class="plan-name">Small Business</span>
+                            <span class="plan-price">$3,800</span>
+                        </span>
+                    </label>
+                    <label class="plan-option">
+                        <input type="radio" name="plan" value="Big Business" required>
+                        <span class="plan-box">
+                            <span class="plan-name">Big Business</span>
+                            <span class="plan-price">$7,000</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Tell me about your project</label>
+                <textarea id="message" rows="5" placeholder="Goals, timeline, anything else..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit">Send It</button>
+        </form>
+    </div>
+</section>
+
 <footer>
     <div class="footer-inner">
         <a href="index.html" class="footer-logo">
