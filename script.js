@@ -23,15 +23,9 @@ mobileMenu.classList.remove('active');
 document.body.style.overflow = '';
 };
 
-// Contact Form
-const form = document.getElementById('contact-form');
-if (form) {
-form.addEventListener('submit', (e) => {
-e.preventDefault();
-alert("🌲 Message received! I'll get back to you within 24 hours (unless I'm off-grid).");
-form.reset();
-});
-}
+// Initialize Formspree
+window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#contact-form', formId: 'mlgvbolw' });
 
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -56,12 +50,3 @@ function navigateTo(section) {
 const el = document.getElementById(section);
 if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
-
-function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sent! I\'ll be in touch soon.';
-    btn.style.background = 'var(--moss)';
-    btn.disabled = true;
-}
-
