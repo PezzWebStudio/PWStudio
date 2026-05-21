@@ -56,3 +56,12 @@ function navigateTo(section) {
 const el = document.getElementById(section);
 if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
+
+function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'Sent! I\'ll be in touch soon.';
+    btn.style.background = 'var(--moss)';
+    btn.disabled = true;
+}
+
